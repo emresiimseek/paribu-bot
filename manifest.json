@@ -1,0 +1,20 @@
+{
+  "name": "Paribu Bot",
+  "description": "Paribu bot.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Paribu bot"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.paribu.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "icons": {
+    "16": "paribu.png",
+    "48": "paribu.png",
+    "128": "paribu.png"
+  }
+}

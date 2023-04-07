@@ -22,7 +22,6 @@ function onPageChanged() {
       var event = new Event("change");
       const price = document.getElementById("price");
       const amount = document.getElementById("amount");
-      const total = document.getElementById("total");
 
       price.value = dataObj?.paribuBuyPrice?.toString() ?? "";
       amount.value = dataObj?.amount?.toString() ?? "";
@@ -52,7 +51,7 @@ function onPageChanged() {
     amount.value = dataObj?.amount?.toString() ?? "";
     const totalValue =
       Number(dataObj?.amount) * Number(dataObj?.paribuBuyPrice);
-    total.value = totalValue.toString();
+    total.value = totalValue.toFixed(2);
 
     price.dispatchEvent(event);
     amount.dispatchEvent(event);

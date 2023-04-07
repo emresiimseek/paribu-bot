@@ -18,7 +18,7 @@ function onPageChanged() {
     const sellButton = document.getElementById("sell");
     sellButton?.click();
 
-    const sellId = setTimeout(() => {
+    setTimeout(() => {
       var event = new Event("change");
       const price = document.getElementById("price");
       const amount = document.getElementById("amount");
@@ -68,8 +68,6 @@ function onPageChanged() {
       }
     }
   }
-
-  clearTimeout(sellId);
 }
 
 // URL değişikliğini dinlemek için olay dinleyicisi ekle
@@ -80,9 +78,7 @@ window.addEventListener("replaceState", onPageChanged);
 
 // Sayfa yüklendiğinde URL'yi console'a yazdır
 document.addEventListener("DOMContentLoaded", () => {
-  const id = setTimeout(() => {
+  setTimeout(() => {
     onPageChanged();
   }, 1000);
-
-  clearTimeout(id);
 });
